@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Astrio Services</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
@@ -20,30 +20,30 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Poppins',sans-serif;
-background:#050014;
+background:#040010;
 color:white;
 overflow-x:hidden;
 }
 
-/* NAVBAR */
+/* HEADER */
 
 header{
 position:fixed;
 top:0;
 left:0;
 width:100%;
-padding:20px 7%;
+padding:18px 7%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.5);
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 z-index:1000;
 border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .logo{
-font-size:38px;
+font-size:36px;
 font-family:'Cinzel',serif;
 font-weight:700;
 color:#ffcc70;
@@ -51,7 +51,7 @@ color:#ffcc70;
 
 nav ul{
 display:flex;
-gap:35px;
+gap:30px;
 list-style:none;
 }
 
@@ -67,59 +67,34 @@ color:#ffcc70;
 }
 
 .book-btn{
-padding:14px 28px;
+padding:14px 30px;
 background:linear-gradient(45deg,#ffcc70,#ff9900);
 border-radius:40px;
 text-decoration:none;
 font-weight:700;
 color:black;
-box-shadow:0 0 25px rgba(255,204,112,0.5);
+box-shadow:0 0 25px rgba(255,204,112,0.4);
 }
 
 /* HERO */
 
 .hero{
-height:100vh;
+min-height:100vh;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:0 7%;
+padding:130px 7% 80px;
 background:
 linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
-url('https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=80&w=1600&auto=format&fit=crop');
-
+url('https://images.unsplash.com/photo-1502134249126-9f3755a50d78?q=80&w=1600&auto=format&fit=crop');
 background-size:cover;
 background-position:center;
 position:relative;
-overflow:hidden;
-}
-
-.hero::before{
-content:'';
-position:absolute;
-width:100%;
-height:100%;
-background:url('https://i.ibb.co/2sK7f16/stars.png');
-opacity:0.2;
-animation:stars 120s linear infinite;
-}
-
-@keyframes stars{
-
-0%{
-transform:translateY(0);
-}
-
-100%{
-transform:translateY(-1000px);
-}
-
+flex-wrap:wrap;
 }
 
 .hero-content{
 max-width:650px;
-position:relative;
-z-index:2;
 }
 
 .hero-content h1{
@@ -135,7 +110,7 @@ color:#ffcc70;
 
 .hero-content p{
 font-size:20px;
-line-height:1.8;
+line-height:1.9;
 color:#ddd;
 margin-bottom:40px;
 }
@@ -154,8 +129,8 @@ border-radius:40px;
 text-decoration:none;
 font-weight:700;
 color:black;
+box-shadow:0 0 25px rgba(255,204,112,0.4);
 transition:0.4s;
-box-shadow:0 0 25px rgba(255,204,112,0.5);
 }
 
 .gold-btn:hover{
@@ -184,7 +159,7 @@ flex-wrap:wrap;
 }
 
 .stat{
-background:rgba(255,255,255,0.05);
+background:rgba(255,255,255,0.08);
 padding:18px 30px;
 border-radius:20px;
 backdrop-filter:blur(10px);
@@ -193,45 +168,45 @@ border:1px solid rgba(255,255,255,0.1);
 
 .stat h2{
 color:#ffcc70;
-margin-bottom:8px;
+font-size:34px;
+margin-bottom:5px;
 }
 
-.hero-image{
-position:relative;
-z-index:2;
-}
+/* HERO IMAGE */
 
 .hero-image img{
-width:650px;
-animation:rotate 35s linear infinite;
-filter:drop-shadow(0 0 40px #ffcc70);
+width:450px;
+animation:rotate 30s linear infinite;
+filter:drop-shadow(0 0 35px #ffcc70);
 }
 
 @keyframes rotate{
-
 0%{
 transform:rotate(0deg);
 }
-
 100%{
 transform:rotate(360deg);
 }
-
 }
 
-/* SERVICES */
+/* SECTION */
 
-.services{
-padding:120px 7%;
-background:#080018;
-text-align:center;
+section{
+padding:110px 7%;
 }
 
 .section-title{
 font-size:58px;
 font-family:'Cinzel',serif;
+text-align:center;
 margin-bottom:70px;
 color:#ffcc70;
+}
+
+/* SERVICES */
+
+.services{
+background:#080018;
 }
 
 .service-grid{
@@ -242,22 +217,22 @@ gap:30px;
 
 .service-card{
 background:rgba(255,255,255,0.05);
-padding:45px 30px;
+padding:40px 30px;
 border-radius:25px;
+text-align:center;
 border:1px solid rgba(255,255,255,0.1);
-backdrop-filter:blur(10px);
-transition:0.5s;
+transition:0.4s;
 }
 
 .service-card:hover{
-transform:translateY(-15px);
-box-shadow:0 0 40px rgba(255,204,112,0.4);
+transform:translateY(-10px);
+box-shadow:0 0 35px rgba(255,204,112,0.4);
 }
 
 .service-card i{
-font-size:60px;
+font-size:55px;
 color:#ffcc70;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .service-card h3{
@@ -265,15 +240,9 @@ font-size:28px;
 margin-bottom:15px;
 }
 
-.service-card p{
-line-height:1.8;
-color:#ccc;
-}
-
 /* ABOUT */
 
 .about{
-padding:120px 7%;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -282,10 +251,24 @@ flex-wrap:wrap;
 background:#050010;
 }
 
-.about img{
-width:420px;
+.about-img img{
+width:400px;
 border-radius:25px;
 box-shadow:0 0 35px rgba(255,204,112,0.4);
+animation:float 4s ease-in-out infinite;
+object-fit:cover;
+}
+
+@keyframes float{
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-15px);
+}
+100%{
+transform:translateY(0px);
+}
 }
 
 .about-content{
@@ -293,7 +276,7 @@ max-width:600px;
 }
 
 .about-content h2{
-font-size:55px;
+font-size:60px;
 font-family:'Cinzel',serif;
 margin-bottom:25px;
 color:#ffcc70;
@@ -309,7 +292,6 @@ color:#ddd;
 /* FEATURES */
 
 .features{
-padding:100px 7%;
 background:#080018;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -322,6 +304,11 @@ background:rgba(255,255,255,0.05);
 padding:40px;
 border-radius:20px;
 border:1px solid rgba(255,255,255,0.1);
+transition:0.4s;
+}
+
+.feature-box:hover{
+transform:translateY(-10px);
 }
 
 .feature-box i{
@@ -330,12 +317,10 @@ color:#ffcc70;
 margin-bottom:20px;
 }
 
-/* TESTIMONIALS */
+/* TESTIMONIAL */
 
 .testimonials{
-padding:120px 7%;
 background:#050010;
-text-align:center;
 }
 
 .testimonial-grid{
@@ -346,8 +331,9 @@ gap:30px;
 
 .testimonial-card{
 background:rgba(255,255,255,0.05);
-padding:40px;
+padding:35px;
 border-radius:20px;
+text-align:center;
 border:1px solid rgba(255,255,255,0.1);
 }
 
@@ -356,15 +342,11 @@ width:80px;
 height:80px;
 border-radius:50%;
 margin-bottom:20px;
-}
-
-.testimonial-card p{
-line-height:1.8;
-margin-bottom:20px;
-color:#ddd;
+border:3px solid #ffcc70;
 }
 
 .testimonial-card h4{
+margin-top:20px;
 color:#ffcc70;
 }
 
@@ -383,22 +365,18 @@ margin-bottom:20px;
 color:#ffcc70;
 }
 
-footer p{
-margin-bottom:30px;
-color:#bbb;
-}
-
 .socials{
 display:flex;
 justify-content:center;
 gap:25px;
+margin-top:25px;
 }
 
 .socials i{
 font-size:28px;
 color:#ffcc70;
-transition:0.3s;
 cursor:pointer;
+transition:0.3s;
 }
 
 .socials i:hover{
@@ -423,26 +401,9 @@ color:white;
 text-decoration:none;
 box-shadow:0 0 30px rgba(37,211,102,0.7);
 z-index:1000;
-animation:pulse 2s infinite;
 }
 
-@keyframes pulse{
-
-0%{
-transform:scale(1);
-}
-
-50%{
-transform:scale(1.1);
-}
-
-100%{
-transform:scale(1);
-}
-
-}
-
-/* RESPONSIVE */
+/* MOBILE */
 
 @media(max-width:1000px){
 
@@ -452,9 +413,7 @@ display:none;
 
 .hero{
 flex-direction:column;
-justify-content:center;
 text-align:center;
-padding-top:120px;
 }
 
 .hero-content h1{
@@ -462,23 +421,25 @@ font-size:50px;
 }
 
 .hero-image img{
-width:320px;
-margin-top:40px;
+width:280px;
+margin-top:50px;
 }
 
 .about{
 text-align:center;
 }
 
-.about img{
-width:100%;
-max-width:350px;
+.about-img img{
+width:280px;
+}
+
+.section-title{
+font-size:42px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
@@ -490,17 +451,13 @@ ASTRIO SERVICES
 </div>
 
 <nav>
-
 <ul>
-
 <li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
 <li><a href="#services">Services</a></li>
-<li><a href="#testimonials">Reviews</a></li>
-<li><a href="#footer">Contact</a></li>
-
+<li><a href="#about">About</a></li>
+<li><a href="#reviews">Reviews</a></li>
+<li><a href="#contact">Contact</a></li>
 </ul>
-
 </nav>
 
 <a href="tel:+918696193415" class="book-btn">
@@ -521,8 +478,8 @@ Discover The Answers
 </h1>
 
 <p>
-Get accurate predictions and expert astrology guidance
-for career, love, business, marriage and health.
+Get accurate astrology guidance for love, marriage,
+career, business and health from expert astrologers.
 </p>
 
 <div class="hero-btns">
@@ -531,7 +488,7 @@ for career, love, business, marriage and health.
 Book Appointment
 </a>
 
-<a href="https://wa.me/918696193415?text=Hello%20I%20want%20to%20book%20an%20appointment"
+<a href="https://wa.me/918696193415?text=Hello%20I%20want%20astrology%20consultation"
 target="_blank"
 class="dark-btn">
 Chat On WhatsApp
@@ -562,7 +519,7 @@ Chat On WhatsApp
 
 <div class="hero-image">
 
-<img src="https://i.ibb.co/Xs4G8kW/zodiac-wheel.png">
+<img src="https://cdn-icons-png.flaticon.com/512/3658/3658773.png">
 
 </div>
 
@@ -587,7 +544,7 @@ Our Services
 <div class="service-card">
 <i class="fa-solid fa-heart"></i>
 <h3>Marriage Matching</h3>
-<p>Check compatibility and relationship future.</p>
+<p>Relationship compatibility and matching guidance.</p>
 </div>
 
 <div class="service-card">
@@ -599,7 +556,7 @@ Our Services
 <div class="service-card">
 <i class="fa-solid fa-moon"></i>
 <h3>Tarot Reading</h3>
-<p>Reveal hidden possibilities and opportunities.</p>
+<p>Reveal hidden opportunities and future possibilities.</p>
 </div>
 
 </div>
@@ -610,7 +567,11 @@ Our Services
 
 <section class="about" id="about">
 
-<img src="https://images.unsplash.com/photo-1604882737321-e693b6f31f1b?q=80&w=900&auto=format&fit=crop">
+<div class="about-img">
+
+<img src="https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=900&auto=format&fit=crop">
+
+</div>
 
 <div class="about-content">
 
@@ -658,9 +619,9 @@ Know More
 
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- REVIEWS -->
 
-<section class="testimonials" id="testimonials">
+<section class="testimonials" id="reviews">
 
 <h2 class="section-title">
 What Clients Say
@@ -687,7 +648,7 @@ Highly recommended.
 
 <p>
 Excellent consultation and positive solutions.
-My experience was wonderful.
+Wonderful experience.
 </p>
 
 <h4>Rahul Verma</h4>
@@ -699,8 +660,7 @@ My experience was wonderful.
 <img src="https://randomuser.me/api/portraits/women/68.jpg">
 
 <p>
-Best astrology service with trusted predictions.
-Very professional guidance.
+Trusted astrology service with professional guidance.
 </p>
 
 <h4>Neha Singh</h4>
@@ -713,7 +673,7 @@ Very professional guidance.
 
 <!-- FOOTER -->
 
-<footer id="footer">
+<footer id="contact">
 
 <h2>
 ASTRIO SERVICES
@@ -736,7 +696,7 @@ Your trusted astrology and spiritual guidance partner.
 
 <!-- WHATSAPP -->
 
-<a href="https://wa.me/918696193415?text=Hello%20I%20need%20astrology%20consultation"
+<a href="https://wa.me/918696193415"
 target="_blank"
 class="whatsapp">
 
@@ -752,11 +712,11 @@ const header=document.querySelector("header");
 
 if(window.scrollY > 50){
 
-header.style.background="rgba(0,0,0,0.8)";
+header.style.background="rgba(0,0,0,0.9)";
 
 }else{
 
-header.style.background="rgba(0,0,0,0.5)";
+header.style.background="rgba(0,0,0,0.6)";
 
 }
 
